@@ -1,0 +1,244 @@
+*, ::before, ::after {
+    box-sizing:border-box;
+    border: px solid red;
+}
+
+body, ul, p, h2 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+$primary-back-clr: #5B191A;
+$secondary-back-clr: #0E0D0D;
+$third-back-clr: rgb(196,196,196);
+$primary-spacing: 2em;
+
+h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header {
+    background: $primary-back-clr;
+    padding:$primary-spacing;
+}
+
+.big-screen-only {
+    display: none;
+}
+
+main {
+    padding: $primary-spacing 0;
+}  
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin:0 auto;
+}
+
+.container {
+    max-width: 800px;
+    margin:0 auto;
+}
+
+.logo {
+    width:150px;
+    height: auto;
+    object-fit: contain;
+}
+
+ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.primary-nav {
+    padding: $primary-spacing / 2;
+}
+
+.nav-link {
+    color:white;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0em .5em;
+}
+
+
+.section__head {
+    background: rgb(196,196,196);
+    padding: $primary-spacing / 2;
+    display:flex;
+    justify-content: center;
+}
+
+.section__body {
+    padding: $primary-spacing;
+}
+
+.section-banner {
+    margin: $primary-spacing 0 0 0;
+}
+
+.main-article {
+    flex: 1 1 100%;
+}
+
+.article__img {
+    height:200px;
+}
+
+.article__text {
+    padding: $primary-spacing / 2;
+    color:white;
+    text-align: center;
+}
+
+.article-link {
+    text-decoration: none;
+}
+
+.main-article + .main-article {
+    margin-top: $primary-spacing;
+}
+
+.section-banner {
+    height:100px;
+}
+
+.primary-nav ,.secondary-nav, .footer, .main-article, .article {
+    background: $secondary-back-clr;
+}
+
+.header__left {
+    display: flex;
+    justify-content: center;
+}
+
+.popular-news .section__body {
+    padding: $primary-spacing $primary-spacing 0 $primary-spacing;
+}
+
+.additional-news .article {
+    margin-top: $primary-spacing;
+}
+
+.additional-news .section__body {
+    padding: 0 $primary-spacing;
+}
+
+footer {
+    color:white;
+    padding:$primary-spacing;
+    text-align: center;
+}
+
+.footer__top {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signature-text {
+    font-size:.6rem;
+}
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.secondary-nav {
+    margin:$primary-spacing/2 0;
+}
+
+// START CSS TABLET
+@media only screen and (min-width: 481px) and (max-width: 999px) {
+    .section__body, .additional-news .section__body {
+        display: flex;
+        padding: 0 0 $primary-spacing 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .main-article, .article {
+        flex: 0 1 47%;
+        margin-top: $primary-spacing;
+    }
+
+    main {
+        padding: $primary-spacing 0 0 0;
+    }  
+
+    .popular-news .section__body {
+        padding: 0 0 0 0;
+    }
+
+    .additional-news .section__body {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding:0 0 $primary-spacing 0;
+    }
+}
+
+// START CSS DESKTOP
+@media only screen and (min-width: 1000px) {
+    
+    .big-screen-only {
+        display: block;
+    }
+
+    .container-m {
+        max-width: 700px;
+        margin:0 auto;
+    }
+
+    .footer__top {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .header__right {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .flex-container {
+        justify-content: space-between;
+    }
+    
+    .section__body {
+        display: flex;
+        padding: $primary-spacing 0;
+    }
+
+    .main-article + .main-article {
+        margin-top: 0;
+        margin-left: $primary-spacing;
+    }
+
+    .additional-news .article {
+        flex: 0 1 40%;
+    }
+
+    .popular-news .section__body {
+        padding: $primary-spacing 0 0 0;
+    }
+
+    .additional-news .section__body {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding:0;
+    }
+}
+    
